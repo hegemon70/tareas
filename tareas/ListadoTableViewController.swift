@@ -122,14 +122,21 @@ class ListadoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "verTarea"{
+            let indexPath=self.tableView.indexPathForSelectedRow
+            let tareaVC=segue.destination as! DetalleViewController
+            tareaVC.tarea=tareas[(indexPath?.row)!]
+            
+        }
+       
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
