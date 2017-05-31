@@ -63,9 +63,14 @@ class ListadoTableViewController: UITableViewController {
     //metodo que pinta cada celda
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-
+        var txtImportante:String=""
         // Configure the cell...
-        cell.textLabel?.text=tareas[indexPath.row].nombre
+        if tareas[indexPath.row].importante==true{
+                txtImportante="⭐️"
+        }else{
+            txtImportante=""
+        }
+        cell.textLabel?.text="\(tareas[indexPath.row].nombre!) \(txtImportante)"
         return cell
     }
  
@@ -78,17 +83,29 @@ class ListadoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        let contexto=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        if editingStyle == .delete{
+            
+            let tarea=tareas[indexPath.row]
+            
+            contexto.delete(tarea)
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            //actualizo mi vector de tablas
+            cargarTareas()
+            
+            //recargo la tabla
+            self.tableView.reloadData()
+        }
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

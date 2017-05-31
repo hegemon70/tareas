@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tareas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tareas" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="108.39580209895054"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Listado Table View Controller-->
         <scene sceneID="BAY-Ny-eV0">
             <objects>
-                <tableViewController id="mp4-9f-aZY" sceneMemberID="viewController">
+                <tableViewController id="mp4-9f-aZY" customClass="ListadoTableViewController" customModule="tareas" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mgg-ug-FOh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,6 +126,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ddS-w4-2Ul" kind="show" identifier="verTarea" id="4BS-5a-iap"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,6 +140,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txf-qH-QXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1536.8" y="107.49625187406298"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XSs-68-5Xm">
+            <objects>
+                <viewController id="ddS-w4-2Ul" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bkA-o8-dSp"/>
+                        <viewControllerLayoutGuide type="bottom" id="YCo-c3-krG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WY9-ds-RlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYX-O0-QUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JfT-lJ-T8c">
