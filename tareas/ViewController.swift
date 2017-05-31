@@ -9,13 +9,18 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController ,
+    UINavigationControllerDelegate,
+    UIImagePickerControllerDelegate{
 
     @IBOutlet weak var nombre: UITextField!
     @IBOutlet weak var texto: UITextField!
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var importante: UISwitch!
     
+    //creamos un recogedor de imagenes
+    var recogedor: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +54,31 @@ class ViewController: UIViewController {
         texto.text=""
         importante.isOn=false
     
+        
+    }
+    @IBAction func elegirImagen(_ sender: Any)
+    {
+        //llamamos a la galeria
+        //UIImagePickerControllerSourceType.camera
+        //UIImagePickerControllerSourceType.photoLibrary
+            if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum))
+            {
+                recogedor=UIImagePickerController()
+                recogedor.delegate=self
+                recogedor.sourceType = .savedPhotosAlbum
+                present(recogedor, animated: true, completion: nil)
+                
+                
+            
+            }else{
+                print("error al acceder a camera o galeria ")
+        }
+        
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        recogedor.dismiss(animated: true, completion: nil)
+        imagen.image=info[UIImagePickerControllerOriginalImage] as? UIImage
         
     }
 }
