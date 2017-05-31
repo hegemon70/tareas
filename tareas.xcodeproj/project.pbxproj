@@ -15,6 +15,8 @@
 		84AF85D01EDF1DC4008D91FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AF85CE1EDF1DC4008D91FC /* LaunchScreen.storyboard */; };
 		84AF85DB1EDF1DC5008D91FC /* tareasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF85DA1EDF1DC5008D91FC /* tareasTests.swift */; };
 		84AF85E61EDF1DC5008D91FC /* tareasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF85E51EDF1DC5008D91FC /* tareasUITests.swift */; };
+		84AF85F41EDF2797008D91FC /* cortacesped.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84AF85F31EDF2797008D91FC /* cortacesped.jpeg */; };
+		84AF85F61EDF2D45008D91FC /* ListadoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF85F51EDF2D45008D91FC /* ListadoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		84AF85E11EDF1DC5008D91FC /* tareasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tareasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AF85E51EDF1DC5008D91FC /* tareasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tareasUITests.swift; sourceTree = "<group>"; };
 		84AF85E71EDF1DC5008D91FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AF85F31EDF2797008D91FC /* cortacesped.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cortacesped.jpeg; sourceTree = "<group>"; };
+		84AF85F51EDF2D45008D91FC /* ListadoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListadoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 			children = (
 				84AF85C21EDF1DC4008D91FC /* AppDelegate.swift */,
 				84AF85C41EDF1DC4008D91FC /* ViewController.swift */,
+				84AF85F51EDF2D45008D91FC /* ListadoTableViewController.swift */,
 				84AF85C61EDF1DC4008D91FC /* Main.storyboard */,
 				84AF85CC1EDF1DC4008D91FC /* Assets.xcassets */,
+				84AF85F31EDF2797008D91FC /* cortacesped.jpeg */,
 				84AF85CE1EDF1DC4008D91FC /* LaunchScreen.storyboard */,
 				84AF85D11EDF1DC4008D91FC /* Info.plist */,
 				84AF85C91EDF1DC4008D91FC /* tareas.xcdatamodeld */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AF85D01EDF1DC4008D91FC /* LaunchScreen.storyboard in Resources */,
+				84AF85F41EDF2797008D91FC /* cortacesped.jpeg in Resources */,
 				84AF85CD1EDF1DC4008D91FC /* Assets.xcassets in Resources */,
 				84AF85C81EDF1DC4008D91FC /* Main.storyboard in Resources */,
 			);
@@ -262,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AF85F61EDF2D45008D91FC /* ListadoTableViewController.swift in Sources */,
 				84AF85C51EDF1DC4008D91FC /* ViewController.swift in Sources */,
 				84AF85C31EDF1DC4008D91FC /* AppDelegate.swift in Sources */,
 				84AF85CB1EDF1DC4008D91FC /* tareas.xcdatamodeld in Sources */,
